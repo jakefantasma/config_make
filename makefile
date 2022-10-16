@@ -1,3 +1,4 @@
+#windows 10 
 #COMPILER
 CC = g++
 #OUT
@@ -16,6 +17,8 @@ Funciones.o : $(SRC)Funciones.hpp
 main.o : main.cpp
 #object to boild in bin 
 objs = main.o Funciones.o
+rutas: 
+	mkdir $(BUILD)
 #build bin 
 all: $(objs) 
 	$(CC) -g "$(BUILD)*.o"  -o "$(BUILD)$(BIN)"
