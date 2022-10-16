@@ -9,7 +9,7 @@ BUILD = build\\
 	$(CC) -c $< -o "$(BUILD)$@"
 %.o : $(SRC)%.cpp
 	$(CC) -c $< -o "$(BUILD)$@"
-%.o : $(SRC)%.hppz
+%.o : $(SRC)%.hpp
 	$(CC) -c $< -o "$(BUILD)$@"
 #build b
 Funciones.o : $(SRC)Funciones.hpp
@@ -20,4 +20,4 @@ objs = main.o Funciones.o
 all: $(objs) 
 	$(CC) -g "$(BUILD)*.o"  -o "$(BUILD)$(BIN)"
 clean: 
-	@cd $(BUILD)  && rm -f $(objs) $(BIN) 
+	@cd $(BUILD)  && rm -f $(objs) $(BINw) 
